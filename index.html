@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
+<script type="text/javascript">
+(function() {
+    emailjs.init("user_kf0cErehZ5YgtvrOt0DzP");
+})();
+</script>
+    
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="first-block">
+            <img src="james.jpeg" alt="">
+        </div>
+        <div class="second-block">
+            <div class="check-up">
+                <span>Регистрация</span>
+            </div>
+            <div class="about">
+                Марафон по созданию музыки
+            </div>
+            <div class="about-down">
+                Заполните форму ниже для прохождения 5-дневного марафона для начинающих 
+            </div>
+            <form id="send_form" onsubmit="sendMail()">
+                <div class="form">
+
+                    <input type="text" id="name" required>
+                    <label for="">Ваше имя</label>
+                
+                </div>
+                <div class="form">
+                    <input type="tel" id="phone" required>
+                    <label for="">Телефон</label>
+                </div>
+                <div class="form">
+                    <input type="email" id="email" required>
+                    <label for="">Электронная почта</label>
+                </div>
+    
+                <div class="checkbox">
+                <div class="check-input">
+                    <input type="checkbox" name="inp" required>
+                </div>
+                <div class="div_checkbox"><span>
+                    Я принимаю условия <a href="#">пользовательского соглашения</a> 
+                </span>
+                    
+                </div>
+               </div>
+                <button class="button" type="submit ">
+                    <a>Зарегистрироваться</a>
+                </button>
+            </form>    
+        </div>
+    </div>
+
+    <div class="popup" id="popup">
+        <div class="container">
+            <div class="popup-head">Вы успешно оставили заявку на марафон</div>
+            <div class="popup-body">Мы свяжемся с вами в ближайшее время по телефону</div>
+            <div class="close-button"><a id="close" onclick="closeModal()">Закрыть окно</button></div>
+
+        </div>
+        
+
+    </div>
+  
+
+  <script src="script.js"></script>
+  <script>
+      function closeModal(){
+      console.log('sssss')
+      document.getElementById("popup").style.visibility = "hidden";
+      document.getElementById("popup").style.opacity = 0;
+  }
+  </script>
+</body>
+</html>
